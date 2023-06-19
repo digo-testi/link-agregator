@@ -75,11 +75,17 @@ body * {
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-of 0.2s forwards;
 }
 
 .light #switch button {
-  animation: slide-in 0.4s forwards;
+  animation: slide-in 0.2s;
 }
+
+#switch button:hover {
+  outline:  8px solid var(--highlight-color);
+}
+
 
 #switch span {
   display: block;
@@ -176,5 +182,15 @@ footer {
 
   to {
     left: 50%;
+  }
+}
+
+@keyframes slide-of {
+  from {
+    left:50%;
+  }
+
+  to {
+    left: 0;
   }
 }
